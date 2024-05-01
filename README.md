@@ -10,16 +10,18 @@ After sending the malicious payload, the response time exceeds 5 seconds.
 ## Issue Impact
 An attacker can employ a SQL Injection attack to dump all data from the database.
 
-Besides that, the REDCap password reset mechanism requires a `password_reset_key` provided in the URL delivered to the user. An attacker can quickly obtain this key using the SQL Injection bug already found and change the passwords of any REDCap users by forging their password reset requests. Then he can access whatever account he desires, especially the admin account.
+Besides that, the REDCap password reset mechanism requires a `password_reset_key` provided in the URL delivered to the user. An attacker can quickly obtain this key using the SQL Injection bug already found and change the passwords of any REDCap users by forging their password reset requests. Then he can access whatever account he wants, especially the admin account.
 
 ![](./attachments/2023-07-11%2017_40_19-Clipboard.png)
 
 Change the admin password successfully
 
-## Discovery/Disclosure Timeline
-- 20/05/23: Vulnerability discovered
-- 01/07/23: Vulnerability reported to REDCap
+## Disclosure Timeline for CVE-2023-38825
+- 05/20/23: Vulnerability discovered
+- 07/01/23: Vulnerability reported to REDCap
 - 07/07/23: Patch provided by REDCap
+- 07/11/23: Writeup published and CVE Requested
+- 08/03/23: CVE-2023-38825 assigned
 
 ## References
 [REDCap Changelog](./attachments/REDCap-changelog.md)
