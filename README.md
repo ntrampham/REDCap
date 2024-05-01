@@ -1,4 +1,4 @@
-# SQL Injection in REDCap Versions <13.8.0
+# CVE-2023-38825: SQL Injection in REDCap Versions <13.8.0
 
 ## Issue Summary
 An SQL Injection vulnerability was found on `/<redcap_version>/MyCapMobileApp/update.php` API. Because of lacking of verifying untrusted data `$_POST['index_modal_update']` results in malicious payload being passed to the SQL query via the `$page_id` variable.
